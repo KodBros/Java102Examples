@@ -3,7 +3,7 @@ package Hastane;
 public class Hastane {
 
     int sira = 0; // dizinin sırası
-    static Hasta[] hastalar; // hastaları burada tutacağız.
+    Hasta[] hastalar; // hastaları burada tutacağız.
 
     public Hastane(int kapasite)
     {
@@ -16,14 +16,15 @@ public class Hastane {
             System.out.println("Hastane dolu");
         } else {
             hastalar[sira] = hastaKisi;
-            sira++;
-            System.out.println("Hasta eklendi adı : " + hastaKisi.isim);
-            System.out.println("Hastalığı : " + hastaKisi.hastalık);
+            sira++; 
         }
     }
     public static void main(String[] args) {
         Hasta hastaKisi = new Hasta("Hüseyin", "grip");
         Hastane LokmanHekimHastanesi = new Hastane(10);
         LokmanHekimHastanesi.hastaEkle(hastaKisi);
+        for (int i = 0; i < LokmanHekimHastanesi.sira; i++) {
+            System.out.println(LokmanHekimHastanesi.hastalar[i].isim+" "+LokmanHekimHastanesi.hastalar[i].hastalık);
+        }
         }
     }

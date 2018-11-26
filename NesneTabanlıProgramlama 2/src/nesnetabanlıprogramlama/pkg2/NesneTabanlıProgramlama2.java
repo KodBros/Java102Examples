@@ -32,6 +32,7 @@ abstract class Canlılar//abstract yazmamızın sebebi bunun soyut bir sınıf o
 
 class Insanlar extends Canlılar {
 
+    //Eğer bir sınıfı extend edersek bulunduğumuz sınıftan extend edilen sınıfın değişkenlerine ve metodlarına ulaşabiliriz.
     int ayakSayisi;
 
     public Insanlar(int ayakSayisi) {

@@ -1,6 +1,6 @@
 package javaapplication4;
 
-public class Ogrenci {
+public class Ogrenci{
     String ad;
     int no;
     private long tc;
